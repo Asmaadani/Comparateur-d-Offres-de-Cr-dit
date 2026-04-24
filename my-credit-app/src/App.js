@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { creditOffers } from "./data.js";
 import OfferCard from "./components/OfferCard.js"
+import CompoundInterest from "./components/CompoundInterest";
 
 function App() {
   const [selectedOffer, setSelectedOffer] = useState(null);
+  const [capital, setCapital] = useState(10000);
+  const [tauxInt, setTauxInt] = useState(5);
   const minRate = Math.min(...creditOffers.map(o => o.rate));
 
   return (
-    <div className="App"> {/* <--- Darori had l-Container l-kbir */}
+    <div className="App"> 
       <h1>Comparateur de Crédit</h1>
       
       <div className="offers-list" style={{ display: 'flex', justifyContent: 'center' }}>
@@ -29,7 +32,12 @@ function App() {
           <p>Coût Total: {selectedOffer.amount} DH</p>
         </div>
       )}
-
+      <CompoundInterest 
+        capital={capital} 
+        setCapital={setCapital} 
+        tauxInt={tauxInt} 
+        setTauxInt={setTauxInt} 
+      />
     </div> 
   );
 }
