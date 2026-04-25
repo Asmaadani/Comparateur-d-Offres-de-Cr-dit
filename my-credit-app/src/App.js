@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css';
 import { creditOffers } from "./data.js";
 import OfferCard from "./components/OfferCard.js"
 import CompoundInterest from "./components/CompoundInterest";

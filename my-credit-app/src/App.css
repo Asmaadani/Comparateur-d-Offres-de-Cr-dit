@@ -1,0 +1,86 @@
+
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfaf6; 
+  min-height: 100vh;
+  padding: 40px;
+  color: #4a4a4a;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+
+.offers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.offer-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: 1px solid #eee;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: #c9ada7; /* Nude Darker */
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+
+.details-section {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid #9a8c98;
+  animation: fadeIn 0.5s ease;
+}
+
+
+.calculator-section {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #f4ece8;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 15px 0;
+  accent-color: #9a8c98;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
