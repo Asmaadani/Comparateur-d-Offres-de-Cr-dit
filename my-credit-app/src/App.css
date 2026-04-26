@@ -24,22 +24,23 @@ h1 {
   margin: 0 auto;
 }
 
-
 .offer-card {
-  background: white;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: none; 
+  box-shadow: 0 10px 20px rgba(216, 196, 182, 0.2); 
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  border: 1px solid #eee;
 }
+
 
 .offer-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
+/* .main-content { display: flex; } */
 
 .badge {
   position: absolute;
@@ -64,6 +65,12 @@ h1 {
   animation: fadeIn 0.5s ease;
 }
 
+.details-section h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9a8c98;
+}
 
 .calculator-section {
   max-width: 500px;
