@@ -10,22 +10,19 @@ const formatCurrency = (amount) => {
 
 function OfferCard({ offre, isRecommended, onSelect }) {
   return (
-    <div 
-      className={`offer-card ${isRecommended ? 'recommended-border' : ''}`} 
-      onClick={onSelect}
-    >
+    <div  className="offer-card" onClick={onSelect} >
       {isRecommended && <span className="badge">Recommended</span>}
       
       <div className="card-header">
-        <h3>{offre.provider}</h3>
+        <h3>{offre.provider}</h3> 
       </div>
       
       <div className="card-body">
-        <p className="amount">{formatCurrency(offre.amount)}</p>
-        <div className="info-row">
-          <span>Taux: <strong>{offre.rate}%</strong></span>
-          <span>Durée: <strong>{offre.duration} ans</strong></span>
-        </div>
+          <p className="amount">{formatCurrency(offre.amount)}</p>
+          <div className="info-row">
+            <span>Taux: <strong>{offre.rate}%</strong></span>
+            <span>Durée: <strong>{offre.duration} ans</strong></span>
+          </div>
       </div>
       
       <button className="btn-details">Voir Détails</button>

@@ -18,10 +18,7 @@ function App() {
   const [tauxInt, setTauxInt] = useState(5);
 
   //  (Recommended)
-  const minRate = useMemo(() => {
-    return Math.min(...creditOffers.map(o => o.rate));
-  }, []);
-
+  const minRate = Math.min(...creditOffers.map(o => o.rate));
   return (
     <div className="App">
       <header className="header">
@@ -30,7 +27,6 @@ function App() {
       </header>
 
       <main className="main-content">
-        {/*Les Cards + Details */}
         <section className="left-side">
           <div className="offers-list">
             {creditOffers.map((offre) => (
